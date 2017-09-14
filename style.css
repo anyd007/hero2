@@ -1,6 +1,6 @@
 body {
-    /*height: 100%;*/
-    /*width: 100%;*/
+    margin: 0%;
+
 }
 
 .bg {
@@ -9,24 +9,25 @@ body {
     display: block;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: auto;
     top: 0;
     left: 0;
 }
 #img1 {
     position: absolute;
-    min-width: 100%;
-    min-height: 100%;
+  width: 100%;
+    height: 100%;
 }
 #img2 {
     position: absolute;
-    min-width: 100%;
-    max-height: 100%;
+   width: 100%;
+    height: 100%;
 }
 #img3 {
     position: absolute;
-    min-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+
 }
 .bg img.active {
     z-index: 3;
@@ -35,24 +36,26 @@ body {
 .bg img.last-active {
     z-index: 2;
 }
-/*----buttons----*/
+/*----buttons slideshow----*/
 .ssPushContainer {
 
     position: absolute;
-    height: 44px;
-    width: 44px;
-    top: 250px;
-    right: 250px;
+    height: 10vh;
+    width: 7vw;
+    top: 25vh;
+    right: 10vw;
     z-index: 5;
 
 }
 .ssPush {
+    height: auto;
+    width: 100%;
     list-style-type: none;
 }
 li#btn1 {
 
-    width: 200px;
-    height: 200px;
+    width: 10vw;
+    height: 18vh;
     margin: 0 70px 15px 0;
     display: inline-block;
     border: 2px solid #fff;
@@ -67,12 +70,12 @@ a{
 }
 li#btn2 {
 
-    width: 200px;
-    height: 200px;
+    width: 10vw;
+    height: 18vh;
     margin: 0 70px 15px 0;
     display: inline-block;
     border: 2px solid #fff;
-    background: url('img/maxresdefault.jpg') no-repeat 0 0;
+    background: url('img/andrei-coman-302139.jpg') no-repeat 0 0;
     background-size: cover;
     border-radius: 100%;
 }
@@ -82,8 +85,8 @@ a{
 }
 li#btn3 {
 
-    width: 200px;
-    height: 200px;
+    width: 10vw;
+    height: 18vh;
     margin: 0 70px 15px 0;
     display: inline-block;
     border: 2px solid #fff;
@@ -91,6 +94,7 @@ li#btn3 {
     background-size: cover;
     background-color: black;
     border-radius: 100%;
+    /*koniec button slideshow*/
 }
 a{
     width: 44px;
@@ -103,3 +107,41 @@ a{
 .ssPush li:hover {
     border: 2px solid tomato;
 }
+
+/*!*call to action*/
+figure{
+    position: absolute;
+    top: 75%;
+    left:32%;
+    z-index: 5;
+    width:30vw;
+    height:6vh;cursor:pointer;
+    perspective:500px;
+}
+figure div{
+    height:100%;
+    transform-style:preserve-3d;
+    transition:0.25s;
+}
+figure:hover div{
+    transform:rotateX(-90deg);}
+span{
+    width:100%;
+    height:auto;
+    position:absolute;
+    box-sizing:border-box;
+    border:5px solid #fff;
+    font-family:'Source Sans Pro',sans-serif;
+    line-height:50px;font-size:17pt;
+    text-align:center;
+    text-transform:uppercase;
+}
+span:nth-child(1){
+    color:#fff;
+    transform: translate3d(0, 0, 30px);
+}
+span:nth-child(2){
+    color:red;
+    background:#fff;
+    transform: rotateX(90deg) translate3d(0, 0, 30px);}
+/*koniec call to action*/
